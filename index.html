@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f2e9">
+    <title>El reto de las cartas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <p class="eyebrow">Un reto de lógica y algoritmos</p>
+        <h1>El reto de las cartas</h1>
+        <p class="intro">Hay 8 cartas numeradas boca abajo. Descubre dos cada vez, compáralas y, si hace falta,
+            intercámbialas.</p>
+
+        <section class="game-panel" aria-labelledby="game-title">
+            <div class="game-heading">
+                <div>
+                    <h2 id="game-title">Ordena de menor a mayor</h2>
+                    <p class="hint">Elige dos cartas para compararlas. Sus números se ocultan al terminar cada turno:
+                        ¡usa la memoria y planifica tus intercambios!</p>
+                </div>
+                <span class="round-badge">8 cartas</span>
+            </div>
+
+            <div id="cards" class="cards" aria-label="Cartas para ordenar"></div>
+            <div class="controls">
+                <button id="compareButton" class="action" type="button" disabled>Comparar las dos</button>
+                <button id="swapButton" class="action" type="button" hidden>Intercambiar</button>
+                <button id="finishTurnButton" class="action secondary" type="button" hidden>Ocultar y seguir</button>
+                <button id="newGameButton" class="action secondary" type="button">Barajar de nuevo</button>
+            </div>
+            <p id="status" class="status" role="status" aria-live="polite">Selecciona dos cartas para empezar.</p>
+            <div class="score" aria-label="Marcador">
+                <span>Comparaciones: <strong id="comparisonCount">0</strong></span>
+                <span>Intercambios: <strong id="swapCount">0</strong></span>
+            </div>
+        </section>
+
+    </main>
+    <script src="game.js"></script>
+</body>
+
+</html>
